@@ -9,6 +9,7 @@
       "OData.WebAPI/1.0.0": {
         "dependencies": {
           "Bogus": "35.6.2",
+          "Microsoft.AspNetCore.OData": "9.2.1",
           "Microsoft.AspNetCore.OpenApi": "10.0.0-preview.1.25120.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.0-preview.1.25081.1",
           "Microsoft.EntityFrameworkCore.Tools": "10.0.0-preview.1.25081.1",
@@ -20,7 +21,7 @@
       },
       "Azure.Core/1.38.0": {
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.ClientModel": "1.0.0",
           "System.Memory.Data": "1.0.2"
         },
@@ -61,6 +62,20 @@
           }
         }
       },
+      "Microsoft.AspNetCore.OData/9.2.1": {
+        "dependencies": {
+          "Microsoft.OData.Core": "8.2.3",
+          "Microsoft.OData.Edm": "8.2.3",
+          "Microsoft.OData.ModelBuilder": "2.0.0",
+          "Microsoft.Spatial": "8.2.3"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.OData.dll": {
+            "assemblyVersion": "9.2.1.0",
+            "fileVersion": "9.2.1.60312"
+          }
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/10.0.0-preview.1.25120.3": {
         "dependencies": {
           "Microsoft.OpenApi": "2.0.0-preview5"
@@ -72,11 +87,11 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
           }
         }
       },
@@ -260,7 +275,7 @@
       "Microsoft.CodeAnalysis.Workspaces.Common/4.8.0": {
         "dependencies": {
           "Humanizer.Core": "2.14.1",
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "Microsoft.CodeAnalysis.Common": "4.8.0",
           "System.Composition": "7.0.0"
         },
@@ -628,11 +643,53 @@
           }
         }
       },
+      "Microsoft.OData.Core/8.2.3": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
+          "Microsoft.OData.Edm": "8.2.3",
+          "Microsoft.Spatial": "8.2.3"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.OData.Core.dll": {
+            "assemblyVersion": "8.2.3.0",
+            "fileVersion": "8.2.3.51211"
+          }
+        }
+      },
+      "Microsoft.OData.Edm/8.2.3": {
+        "runtime": {
+          "lib/net8.0/Microsoft.OData.Edm.dll": {
+            "assemblyVersion": "8.2.3.0",
+            "fileVersion": "8.2.3.51211"
+          }
+        }
+      },
+      "Microsoft.OData.ModelBuilder/2.0.0": {
+        "dependencies": {
+          "Microsoft.OData.Edm": "8.2.3",
+          "Microsoft.Spatial": "8.2.3",
+          "System.ComponentModel.Annotations": "4.6.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.OData.ModelBuilder.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.50819"
+          }
+        }
+      },
       "Microsoft.OpenApi/2.0.0-preview5": {
         "runtime": {
           "lib/net8.0/Microsoft.OpenApi.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Spatial/8.2.3": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Spatial.dll": {
+            "assemblyVersion": "8.2.3.0",
+            "fileVersion": "8.2.3.51211"
           }
         }
       },
@@ -682,6 +739,7 @@
           }
         }
       },
+      "System.ComponentModel.Annotations/4.6.0": {},
       "System.Composition/7.0.0": {
         "dependencies": {
           "System.Composition.AttributedModel": "7.0.0",
@@ -818,6 +876,13 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.OData/9.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lpeUMgPLAhoruijWilKjw+wI0BcBGekD+W5lr4SdiEShw8e9RiqRIYO7/ogGst0lL+IP4nR1nLWVgSgMSwrDCg==",
+      "path": "microsoft.aspnetcore.odata/9.2.1",
+      "hashPath": "microsoft.aspnetcore.odata.9.2.1.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.OpenApi/10.0.0-preview.1.25120.3": {
       "type": "package",
       "serviceable": true,
@@ -825,12 +890,12 @@
       "path": "microsoft.aspnetcore.openapi/10.0.0-preview.1.25120.3",
       "hashPath": "microsoft.aspnetcore.openapi.10.0.0-preview.1.25120.3.nupkg.sha512"
     },
-    "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
+    "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3aeMZ1N0lJoSyzqiP03hqemtb1BijhsJADdobn/4nsMJ8V1H+CrpuduUe4hlRdx+ikBQju1VGjMD1GJ3Sk05Eg==",
-      "path": "microsoft.bcl.asyncinterfaces/7.0.0",
-      "hashPath": "microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512"
+      "sha512": "sha512-3WA9q9yVqJp222P3x1wYIGDAkpjAku0TMUaaQV22g6L67AI0LdOIrVS7Ht2vJfLHGSPVuqN94vIr15qn+HEkHw==",
+      "path": "microsoft.bcl.asyncinterfaces/8.0.0",
+      "hashPath": "microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512"
     },
     "Microsoft.Bcl.Cryptography/9.0.0": {
       "type": "package",
@@ -1014,12 +1079,40 @@
       "path": "microsoft.identitymodel.tokens/7.5.0",
       "hashPath": "microsoft.identitymodel.tokens.7.5.0.nupkg.sha512"
     },
+    "Microsoft.OData.Core/8.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-c6AJxdmNHqTnH2XYQnYz4qttpIqfBpNBO4dZ68xDMxNN/+9Uu/pOKDZRAs7NCy50c+svCImh4v18J4g6Ycxoiw==",
+      "path": "microsoft.odata.core/8.2.3",
+      "hashPath": "microsoft.odata.core.8.2.3.nupkg.sha512"
+    },
+    "Microsoft.OData.Edm/8.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zba6EjkjyCT8ofUP7oXz1L5d8XfA20g0gGJMHohAAhCPJm1ChRzNEtoxYoYIB6qB7Ml19JDO6HZalO49/e/DTw==",
+      "path": "microsoft.odata.edm/8.2.3",
+      "hashPath": "microsoft.odata.edm.8.2.3.nupkg.sha512"
+    },
+    "Microsoft.OData.ModelBuilder/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QzySAMGhLCMyLNHSTIYKFjJXetoDeGkRS/7JEjm7eMJlyu1Qv4MfL1CXQFg2uijizNu2jQojT0mdCpawXbyv8Q==",
+      "path": "microsoft.odata.modelbuilder/2.0.0",
+      "hashPath": "microsoft.odata.modelbuilder.2.0.0.nupkg.sha512"
+    },
     "Microsoft.OpenApi/2.0.0-preview5": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-hVkzG3wcrPMN8ZCPI+9pzYJA/HgvdZnmf2lf4FzlcRG1lvA9eV0Pceen4dny8H7W0aVUBmgKsUScd2ssw7gpmQ==",
       "path": "microsoft.openapi/2.0.0-preview5",
       "hashPath": "microsoft.openapi.2.0.0-preview5.nupkg.sha512"
+    },
+    "Microsoft.Spatial/8.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N8rhHhMojEYdH9P+JG208+s6dpR5P1rVyiGaDB5oV2YTVH+zA5utK3V3V4ytAMLb4GaqOyLyzMOgSLEWM0ulgQ==",
+      "path": "microsoft.spatial/8.2.3",
+      "hashPath": "microsoft.spatial.8.2.3.nupkg.sha512"
     },
     "Microsoft.SqlServer.Server/1.0.0": {
       "type": "package",
@@ -1055,6 +1148,13 @@
       "sha512": "sha512-CPc6tWO1LAer3IzfZufDBRL+UZQcj5uS207NHALQzP84Vp/z6wF0Aa0YZImOQY8iStY0A2zI/e3ihKNPfUm8XA==",
       "path": "system.codedom/6.0.0",
       "hashPath": "system.codedom.6.0.0.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pOd+UhZ3X8xfwKDlgAzowUJNjp8VYVmOHZm++vCd0kq1HZ0zK3mNo2yRXjYgv7Ik/Xi43fmJfND2PLEsQSALCg==",
+      "path": "system.componentmodel.annotations/4.6.0",
+      "hashPath": "system.componentmodel.annotations.4.6.0.nupkg.sha512"
     },
     "System.Composition/7.0.0": {
       "type": "package",

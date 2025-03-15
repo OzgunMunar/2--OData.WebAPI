@@ -1,21 +1,31 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.AspNetCore.OData.Routing.Controllers;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
 using OData.WebAPI.Context;
 using OData.WebAPI.Models;
 
 namespace OData.WebAPI.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("odata")]
     [ApiController]
-    public class CategoryController(ApplicationDbContext context) : ControllerBase
+    public class CategoryController(ApplicationDbContext context) : ODataController
     {
-        [HttpGet("GetAllCategories")]
-        public async Task<List<Category>> Get()
+        public static IEdmModel GetEdmModel( )
         {
-            var categories = await context.Categories.ToListAsync();
+            ODataConventionModelBuilder builder = new();
+            builder.EntitySet<Category>("GetAllCategories");
+
+            return builder.GetEdmModel();
+        }
+        [HttpGet("GetAllCategories")]
+        [EnableQuery]
+        public IQueryable<Category> Get()
+        {
+            var categories = context.Categories.AsQueryable();
             return categories;
         }
+        
     }
 }
-
-// 15:10

@@ -1,6 +1,8 @@
 using Bogus;
+using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using OData.WebAPI.Context;
+using OData.WebAPI.Controllers;
 using OData.WebAPI.Models;
 using Scalar.AspNetCore;
 
@@ -13,7 +15,13 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => {
 
 });
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddOData(options => {
+
+    options
+        .EnableQueryFeatures()
+        .AddRouteComponents("odata", CategoryController.GetEdmModel());
+    
+});
 builder.Services.AddOpenApi();
 
 var app = builder.Build();

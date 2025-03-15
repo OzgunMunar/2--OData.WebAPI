@@ -1,0 +1,16 @@
+$skip 0
+
+$top 20
+
+$orderby Name
+
+$select Name
+
+$filter Name eq 'Automotive'
+
+$expand makes join
+
+// top ve select'e izin ver.
+// [EnableQuery(AllowedQueryOptions = AllowedQueryOptions.Top | AllowedQueryOptions.Select)]
+// hepsine izin ver ama select atamasin.
+// [EnableQuery(AllowedQueryOptions = AllowedQueryOptions.All &  ~AllowedQueryOptions.Select)]
