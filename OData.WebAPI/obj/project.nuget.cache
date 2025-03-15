@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "sf2p8B6w8gk=",
+  "dgSpecHash": "Vtgazye+b9M=",
   "success": true,
   "projectFilePath": "/Users/Ozgun/Desktop/Dotnet Projects/2) OData.WebAPI/OData.WebAPI/OData.WebAPI.csproj",
   "expectedPackageFiles": [
+    "/Users/Ozgun/.nuget/packages/ardalis.smartenum/8.2.0/ardalis.smartenum.8.2.0.nupkg.sha512",
     "/Users/Ozgun/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/Ozgun/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
     "/Users/Ozgun/.nuget/packages/bogus/35.6.2/bogus.35.6.2.nupkg.sha512",
