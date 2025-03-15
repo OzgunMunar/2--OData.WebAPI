@@ -1,4 +1,4 @@
-namespace Odata.WebAPI.Dtos;
+namespace OData.WebAPI.Dtos;
 
 public sealed class ProductDto
 {

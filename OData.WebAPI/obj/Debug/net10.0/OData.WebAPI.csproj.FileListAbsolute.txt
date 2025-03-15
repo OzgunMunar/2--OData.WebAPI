@@ -158,3 +158,4 @@
 /Users/Ozgun/Desktop/Dotnet Projects/2) OData.WebAPI/OData.WebAPI/bin/Debug/net10.0/Microsoft.OData.Edm.dll
 /Users/Ozgun/Desktop/Dotnet Projects/2) OData.WebAPI/OData.WebAPI/bin/Debug/net10.0/Microsoft.OData.ModelBuilder.dll
 /Users/Ozgun/Desktop/Dotnet Projects/2) OData.WebAPI/OData.WebAPI/bin/Debug/net10.0/Microsoft.Spatial.dll
+/Users/Ozgun/Desktop/Dotnet Projects/2) OData.WebAPI/OData.WebAPI/bin/Debug/net10.0/Ardalis.SmartEnum.dll

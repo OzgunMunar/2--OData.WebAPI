@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
-using Odata.WebAPI.Dtos;
 using OData.WebAPI.Context;
+using OData.WebAPI.Dtos;
 using OData.WebAPI.Models;
 
 namespace OData.WebAPI.Controllers
 {
-    
+
     [Route("odata")]
     [ApiController]
     [EnableQuery]
@@ -20,9 +20,11 @@ namespace OData.WebAPI.Controllers
 
             ODataConventionModelBuilder builder = new();
 
+            builder.EnableLowerCamelCase();
             builder.EntitySet<Category>("GetAllCategories");
             builder.EntitySet<Product>("GetAllProducts");
             builder.EntitySet<ProductDto>("GetAllProductsDto");
+            builder.EntitySet<UserDto>("GetAllUsersDto");
 
             return builder.GetEdmModel();
 
@@ -58,6 +60,27 @@ namespace OData.WebAPI.Controllers
             .AsQueryable();
 
             return products;
+
+        }
+
+        [HttpGet("GetAllUsersDto")]
+        public IQueryable<UserDto> GetAllUsers()
+        {
+
+            var users = context.Users
+                .Select(user => new UserDto {
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    FullName = user.FullName,
+                    Address = user.Address,
+                    Id = user.Id,
+                    UserType = user.UserType,
+                    UserTypeName = user.UserType.Name,
+                    UserTypeValue = user.UserType.Value,
+                })
+                .AsQueryable();
+
+            return users;
 
         }
 

@@ -19,14 +19,10 @@ public sealed class User
 
 }
 
-public sealed class UserTypeEnum : SmartEnum<UserTypeEnum>
+public sealed class UserTypeEnum(string name, int value) : SmartEnum<UserTypeEnum>(name, value)
 {
     public static UserTypeEnum User = new("User", 0);
     public static UserTypeEnum Admin = new("Admin", 1);
-    public UserTypeEnum(string name, int value) : base(name, value)
-    {
-        
-    }
 }
 
 public sealed record Address(
