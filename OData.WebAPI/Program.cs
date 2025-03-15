@@ -19,7 +19,7 @@ builder.Services.AddControllers().AddOData(options => {
 
     options
         .EnableQueryFeatures()
-        .AddRouteComponents("odata", CategoryController.GetEdmModel());
+        .AddRouteComponents("odata", ODataGetMethodsController.GetEdmModel());
     
 });
 builder.Services.AddOpenApi();

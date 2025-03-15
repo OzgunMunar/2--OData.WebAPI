@@ -10,21 +10,33 @@ namespace OData.WebAPI.Controllers
 {
     [Route("odata")]
     [ApiController]
-    public class CategoryController(ApplicationDbContext context) : ODataController
+    [EnableQuery]
+    public class ODataGetMethodsController(ApplicationDbContext context) : ODataController
     {
         public static IEdmModel GetEdmModel( )
         {
+
             ODataConventionModelBuilder builder = new();
+
             builder.EntitySet<Category>("GetAllCategories");
+            builder.EntitySet<Product>("GetAllProducts");
 
             return builder.GetEdmModel();
+            
         }
+
         [HttpGet("GetAllCategories")]
-        [EnableQuery]
-        public IQueryable<Category> Get()
+        public IQueryable<Category> GetAllCategories()
         {
             var categories = context.Categories.AsQueryable();
             return categories;
+        }
+
+        [HttpGet("GetAllProducts")]
+        public IQueryable<Product> GetAllProducts()
+        {
+            var products = context.Products.AsQueryable();
+            return products;
         }
         
     }

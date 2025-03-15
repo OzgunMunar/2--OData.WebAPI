@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OData.WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f60d69850acf0f12c812b2f39cadd0561d1e25de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc562224dcedebe9e6f89ce61e7f10e5c815e7de")]
 [assembly: System.Reflection.AssemblyProductAttribute("OData.WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OData.WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
