@@ -42,6 +42,31 @@ app.MapGet("seed-data/categories", async (ApplicationDbContext context) => {
 
     return Results.NoContent();
 
+}).Produces(204).WithTags("SeedProducts");
+
+app.MapGet("seed-data/products", async (ApplicationDbContext context) => {
+   
+    Faker faker = new();
+    var categories = context.Categories.ToList();
+    List<Product> products = new();
+
+    for(int i = 0; i < 10000; i++)
+    {
+        faker = new();
+        Product product = new() 
+        {
+            CategoryId = categories[new Random().Next(categories.Count)].Id,
+            Name = faker.Commerce.ProductName(),
+            Price = Convert.ToDecimal(faker.Commerce.Price(100, 10000, 2))
+        };
+        products.Add(product);
+    }
+
+    context.AddRange(products);
+    await context.SaveChangesAsync();
+
+    return Results.NoContent();
+
 });
 
 app.MapControllers();
